@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@function data($num){
+  @return $num/20;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  height: 100%;
+}
+
+//登录总页面部分开始
+#contain{
+  width: 100%;
+  height: 100%;
+  position:relative;
+}
+#loginStart{
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  .loginTitle{
+    width: 90%;
+    height: data(35rem);
+    margin: 0 auto;
+    color: #000;
+    font-size: data(30rem);
+    text-align: center;
+    line-height: data(35rem);
+  }
+  .chatLogin{
+    width: 90%;
+    height: data(42rem);
+    background: #09BB07;
+    border-radius: data(20rem);
+    text-align: center;
+    line-height: data(42rem);
+    color: #FFFFFF;
+    font-size: data(14rem);
+    margin: data(50rem) auto;
+    b{
+      font-family: iconfont;
+      color: #FFFFFF;
+      font-size: data(15rem);
+    }
+  }
+  .hrHr{
+    width: data(25rem);
+    height: data(1rem);
+    background: #808080;
+    margin: data(30rem) auto;
+  }
+  .anther{
+    width: 90%;
+    height: data(20rem);
+    margin: data(40rem) auto;
+    font-size: data(14rem);
+    color: #808080;
+    text-align: center;
+    line-height: data(20rem);
+  }
+  .manyWay{
+    width: 90%;
+    height: data(70rem);
+    margin: data(20rem) auto;
+    //background: red;
+    display: flex;
+    justify-content: space-around;
+    div{
+      text-align: center;
+      a{
+        text-decoration: none;
+        img{
+          width: data(38rem);
+          height: data(38rem);
+          margin: data(5rem) auto;
+        }
+        p{
+          font-size: data(12rem);
+          color: #808080;
+        }
+      }
+    }
+  }
+}
+//登录总页面部分结束

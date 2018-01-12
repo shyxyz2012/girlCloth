@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@function data($num){
+  @return $num/20;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  height: 100%;
+}
+
+#all{
+  width: 100%;
+  height: 100%;
+}
+//账号登录页部分开始
+#accountL{
+  width: 100%;
+  overflow: hidden;
+  background: red;
+  .accountTitle{
+    width: 100%;
+    height: data(140rem);
+    background: #FAFAFA;
+    .arrow{
+      width: 15%;
+      height: 100%;
+      float: left;
+      font-family: iconfont;
+      color: #808080;
+      font-size: data(56rem);
+      text-align: center;
+      line-height: data(140rem);
+    }
+    .aLogin{
+      width: 65%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      font-size: data(60rem);
+      line-height: data(140rem);
+    }
+  }
+}
+//账号登录页部分结束

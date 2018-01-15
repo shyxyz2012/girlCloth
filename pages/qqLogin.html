@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>qq登录页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="../js/rem.js"></script>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="../css/qqLogin.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_1ufasa1j79hn0zfr.css">
+</head>
+<body>
+    <!--QQ登录部分开始-->
+    <div id="qqLogin">
+        <div class="qqLogin-title">
+            <img src="../img/qqlogo.png">
+            <h2>登录</h2>
+            <p>亿万用户已选择QQ帐号登录应用</p>
+        </div>
+        <div class="userIntro">
+            <div class="username"><input type="text" placeholder="支持QQ号/邮箱/手机号登录"></div>
+            <div class="psw"><input type="password" placeholder="密码"></div>
+        </div>
+        <div class="loginBtn">
+            <a href="">登录</a>
+        </div>
+        <div class="loginPower">
+            <p>蘑菇街将获得以下权限:</p>
+            <div>
+                <table>
+                    <tr class="one">
+                        <td><i>&#xe603;</i></td>
+                        <td>访问你的详细资料(必选)</td>
+                    </tr>
+                    <tr class="two">
+                        <td><i>&#xe603;</i></td>
+                        <td>访问你的基础资料(必选)</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>访问你的腾讯微博资料</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>分享内容到腾讯微博</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>获得你的微博好友信息</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>关注该网站认证空间</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>同步动态至QQ空间</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>获得空间相册内容</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>同步动态至Q+</td>
+                    </tr>
+                    <tr>
+                        <td><i>&#xe603;</i></td>
+                        <td>获取会员信息</td>
+                    </tr>
+                </table>
+                <button value="1">﹀查看全部</button>
+            </div>
+        </div>
+    </div>
+    <!--QQ登录部分结束-->
+</body>
+</html>
+<script>
+    $(function(){
+        $("td :lt(4)").css("display","block");
+        var btn=document.querySelector(".loginPower button");
+
+        $(".loginPower button").click(function(){
+            var dis=$(".loginPower tr:eq(2)").css("display");
+            if(dis=="none"){
+                $(".loginPower tr").css("display","block");
+            }else{
+                $(".loginPower tr").css("display","none");
+                $(".loginPower tr:lt(2)").css("display","block");
+            }
+
+            var i=btn.value++;
+            if(i%2==0){
+                btn.innerHTML='︿查看全部';
+            }else{
+                btn.innerHTML='︿点击收起';
+            }
+        });
+    });
+</script>

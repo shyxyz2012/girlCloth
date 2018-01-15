@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>购物车页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../css/shopCar.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script src="../js/rem.js"></script>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_ijhlmhzjzcl3di.css">
+</head>
+<body>
+    <!--加入购物车部分开始-->
+    <div id="shopCar">
+        <div class="shopCar-title">
+            <div class="shopCar-titleIn">
+                <b>&#xe61c;</b>
+                <span>购物车(1)</span>
+                <span>编辑<b>&#xe67c;</b></span>
+            </div>
+        </div>
+        <div class="shopCar-LQ">
+            <div class="shopCar-LQT">
+                <div>
+                    <p><b></b>护肤品潮流店</p>
+                    <span>领券 ></span>
+                </div>
+            </div>
+            <div class="shopCarProImg">
+                <div class="shopCarDetail">
+                    <p class="one"></p>
+                    <div class="twoImg">
+                        <img src="../img/inCar.webp">
+                        <div>
+                            <h6>御泥坊美白补水保湿护肤品套装水乳正品 亮肤去黄淡斑遮瑕素颜霜</h6>
+                            <p class="two">作用：补水；大小：中；</p>
+                            <p class="three">￥78<del>￥111.43</del></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--加入购物车部分结束-->
+</body>
+</html>
+<script>
+    var backUp=document.querySelector('.shopCar-titleIn b');
+    backUp.onclick=function(){
+        history.back();
+    }
+</script>

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@function data($num){
+  @return $num/20;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  height: 100%;
+}
+
+//QQ登录部分开始
+#qqLogin{
+  width: 100%;
+  .qqLogin-title{
+    width: 90%;
+    height: data(100rem);
+    margin: 0 auto;
+    img{
+      width: data(100rem);
+      height: data(40rem);
+      margin: data(20rem) auto;
+      float: left;
+    }
+    h2{
+      float: left;
+      margin: data(20rem) data(10rem);
+    }
+    p{
+      font-size: data(14rem);
+      color: #808080;
+      clear: both;
+    }
+  }
+  .userIntro{
+    width: 85%;
+    height: data(40rem);
+    margin: data(10rem) auto;
+    div{
+      width: 100%;
+      height: data(50rem);
+      margin: data(10rem) auto;
+      border-bottom: 1px solid #808080;
+      input{
+        width: 100%;
+        height: data(50rem);
+        font-size: data(20rem);
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .loginBtn{
+    width: 90%;
+    height: data(40rem);
+    background: #12B7F5;
+    border-radius: data(5rem);
+    margin:data(90rem) auto;
+    text-align: center;
+    a{
+      text-decoration: none;
+      font-size: data(20rem);
+      line-height: data(40rem);
+      color: #FFFFFF;
+    }
+  }
+  .loginPower{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    p{
+      width: 90%;
+      margin: 0 auto;
+      font-size: data(16rem);
+    }
+    div{
+      width: 90%;
+      border: 1px solid #808080;
+      border-radius: data(5rem);
+      font-size: data(12rem);
+      color: #808080;
+      margin: data(10rem) auto;
+      i{
+        font-family: iconfont;
+        font-size: data(24rem);
+      }
+      tr{
+        display: none;
+      }
+      tr.one,tr.two{
+        display: block;
+      }
+      button{
+        display: block;
+        margin: 0 auto;
+        width: data(80rem);
+        height: data(30rem);
+        font-size: data(12rem);
+        background: #FFFFFF;
+        border: 0;
+        outline: 0;
+        color: #808080;
+      }
+      }
+    }
+}
+
+//QQ登录部分结束

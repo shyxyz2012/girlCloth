@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>账号登录页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="../css/accountLogin.css">
     <link rel="stylesheet" href="../js/rem.js">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_yknz8a9ql99newmi.css">
@@ -10,14 +11,29 @@
 </head>
 <body>
     <!--账号登录页部分开始-->
-    <div id="all">
+    <form action="" method="post">
         <div id="accountL">
             <div class="accountTitle">
                 <div class="arrow">&#xe791;</div>
                 <div class="aLogin">账号登录</div>
             </div>
+            <div class="userIntro">
+                <div class="username"><input type="text" placeholder="用户名/邮箱/手机号"></div>
+                <div class="psw"><input type="password" placeholder="密码"></div>
+            </div>
+            <div class="loginBtn">
+                <a href="">登录</a>
+            </div>
+            <p><a href="">忘记密码</a></p>
         </div>
-    </div>
+    </form>
+
     <!--账号登录页部分结束-->
 </body>
 </html>
+<script>
+    var backUp=document.querySelector('.arrow');
+    backUp.onclick=function(){
+        history.back();
+    }
+</script>

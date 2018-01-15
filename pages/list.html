@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>产品列表页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script src="../js/rem.js"></script>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_ijhlmhzjzcl3di.css">
+</head>
+<body>
+    <!--产品列表部分开始-->
+    <div id="proList">
+        <!--产品列表头部开始-->
+        <div id="search">
+            <div class="search-inner">
+                <b>&#xe67c;</b>
+                <div>
+                    <b>&#xe634;</b>
+                    <input type="text" placeholder="韩版儿童运动鞋">
+                </div>
+                <a href="../pages/shopCar.html"><b class="car">&#xe601;</b></a>
+            </div>
+            <div class="searchHide">
+                <div class="searchHide-title">
+                    <div class="hideTitle-inner">
+                        <b>&#xe61c;</b>
+                        <div class="inner"><input type="text" placeholder="帽子"></div>
+                        <div class="searchL">搜索</div>
+                    </div>
+                </div>
+                <div class="searchHistory">
+                    <div class="fangda">
+                        <b>&#xe634;<span>历史搜索</span></b>
+                        <ins>&#xe663;</ins>
+                        <!--<ul>-->
+                        <!--<li></li>-->
+                        <!--</ul>-->
+                    </div>
+                </div>
+                <div class="hotSearch">
+                    <div><b>&#xe602;<span>热门搜索</span></b></div>
+                </div>
+            </div>
+        </div>
+        <!--产品列表头部结束-->
+
+        <!--最热卖部分开始-->
+        <div id="hotMarket">
+            <div class="hotMarket-title">
+                最热卖
+            </div>
+            <div class="clothType-all">
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao1.webp">
+                        <p>双肩背包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao2.webp">
+                        <p>斜挎包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao3.webp">
+                        <p>单肩包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao4.webp">
+                        <p>手提包</p>
+                    </a>
+                </div>
+
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao5.webp">
+                        <p>一周新品</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao6.webp">
+                        <p>旅行箱包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao7.webp">
+                        <p>迷你小包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao8.webp">
+                        <p>实用大包</p>
+                    </a>
+                </div>
+
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao9.webp">
+                        <p>钱包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao10.webp">
+                        <p>小方包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao11.webp">
+                        <p>小圆包</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/bao12.webp">
+                        <p>个性原创</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--最热卖部分结束-->
+
+        <!--最流行部分开始-->
+        <div id="hotFaction">
+            <div class="hotMarket-title">
+                最流行
+            </div>
+            <div class="clothType-all">
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/faction1.webp">
+                        <p>热卖美裙</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/faction2.webp">
+                        <p>半身裙</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/faction3.webp">
+                        <p>假两件</p>
+                    </a>
+                </div>
+                <div class="clothType">
+                    <a href="">
+                        <img src="../img/faction4.webp">
+                        <p>卫衣裙</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--最流行部分结束-->
+
+        <!--夏季新款部分开始-->
+        <div id="youLove">
+            <div class="youLove-title">
+                夏季新款
+            </div>
+            <div class="summerNew">
+                <div class="newType">
+                    <div>精选</div>
+                    <div>男友</div>
+                    <div>裙子</div>
+                    <div>美妆</div>
+                    <div>上衣</div>
+                </div>
+            </div>
+            <div class="youLove-all">
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/qun1.webp">
+                        <div class="loveIntro">
+                            <span>温暖开叉一步裙长裙秋冬毛线裙高腰裙子百搭中长款针织包臀半身裙</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥0.25</p>
+                            <p>292<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="pages/details.html">
+                        <img src="../img/qun2.webp">
+                        <div class="loveIntro">
+                           <span>【冬季新款】林珊珊同款长袖长裙修身内搭厚打底针织裙毛衣连衣裙</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.8</p>
+                            <p>1.5w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/qun3.webp">
+                        <div class="loveIntro">
+                           <span>时尚金丝绒半身长裙子冬女秋冬新款韩系显瘦中长款百褶裙冬天黑色</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥19.5</p>
+                            <p>3.3w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/qun4.webp">
+                        <div class="loveIntro">
+                           <span>2017秋装新款显瘦长袖中长款系带收腰针织打底毛连衣裙女</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥29.4</p>
+                            <p>19.0w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/qun5.webp">
+                        <div class="loveIntro">
+                            <span>假两件蕾丝拼接毛衣裙女套头韩版半高领中长款过膝打底衫加厚秋冬</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥59</p>
+                            <p>5441<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/qun6.webp">
+                        <div class="loveIntro">
+                            <span>秋冬松紧腰防走光安全裤加厚毛呢半身裙学院风短裙百褶裙裤裙女装</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥29.9</p>
+                            <p>4597<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei1.webp">
+                        <div class="loveIntro">
+                           <span>柔色控油蜜粉定妆散粉防水防汗持久不易脱妆遮瑕</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥136.5</p>
+                            <p>9875<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei2.webp">
+                        <div class="loveIntro">
+                            <span>御泥坊爆款清爽黑膜21片补水保湿面膜贴清洁控油</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥72.91</p>
+                            <p>1.5w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei3.webp">
+                        <div class="loveIntro">
+                            <span>悦诗风吟绿茶薄荷控油散粉持久定妆粉5g</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥172.91</p>
+                            <p>672<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei4.webp">
+                        <div class="loveIntro">
+                           <span>【99元3盒送15片】珀薇蚕丝面膜贴7片补水保湿收缩毛孔正品</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥158</p>
+                            <p>349<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei5.webp">
+                        <div class="loveIntro">
+                            <span>蜗牛原液护肤品套装素颜霜锁水保湿滋润除痘印水乳套装化妆品正品</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥19.5</p>
+                            <p>3.3w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei6.webp">
+                        <div class="loveIntro">
+                           <span>ILISYA清透自然妆全套15件初学者彩妆套装化妆品</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥29.4</p>
+                            <p>19.0w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei7.webp">
+                        <div class="loveIntro">
+                            <span>水密码套装美白补水保湿化妆品套装护肤品套装专柜正品女</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥121.91</p>
+                            <p>6790<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei8.webp">
+                        <div class="loveIntro">
+                            <span>【99元选5】粉色安琪哑光口红唇膏斩男豆沙姨妈南瓜砖红色咬唇妆正品保湿持久防水不脱妆</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥158</p>
+                            <p>349<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/mei9.webp">
+                        <div class="loveIntro">
+                            <span>【第2件半价】WIS隐形水润面膜补水保湿补水面膜正品24片面膜收缩毛孔保湿面膜贴</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥49</p>
+                            <p>9087<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/nan1.webp">
+                        <div class="loveIntro">
+                           <span>2017冬季新款棉衣男外套日系男士加厚保暖连帽棉衣外套男上衣</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥128.8</p>
+                            <p>456<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/nan2.webp">
+                        <div class="loveIntro">
+                            <span>秋冬新款男士撞色毛衣圆领修身线衣潮流男装青少年韩版针织衫</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥68.8</p>
+                            <p>8890<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/nan3.webp">
+                        <div class="loveIntro">
+                            <span>冬季中长款棉服男韩版宽松bf宿风宽松加厚大毛领连帽棉衣男潮</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥58</p>
+                            <p>349<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/nan4.webp">
+                        <div class="loveIntro">
+                            <span>冬季中长款棉服男韩版宽松bf宿风宽松加厚大毛领连帽棉衣男潮</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥99.4</p>
+                            <p>137<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/nan5.webp">
+                        <div class="loveIntro">
+                            <span>冬季新款加厚青年棉服男士棉衣短款保暖连帽韩版修身学生棉袄外套</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang1.webp">
+                        <div class="loveIntro">
+                            <span>秋冬季新款宽松连帽毛领加厚棉衣外套韩版短款棉袄面包服棉服女</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang2.webp">
+                        <div class="loveIntro">
+                            <span>冬季新款韩版大毛领连帽面包服棉衣工装系带中长款收腰棉服外套女</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang3.webp">
+                        <div class="loveIntro">
+                            <span>2017秋东新款字母刺绣宽松bf风套头黑色套头卫衣</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang4.webp">
+                        <div class="loveIntro">
+                            <span>ins超火原宿bf风高领卫衣女套头高领加绒加厚款宽松上衣外套冬宽松潮大码嘻哈情侣装学生上衣</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang5.webp">
+                        <div class="loveIntro">
+                            <span>秋冬棉服加厚中长款大毛领棉衣外套女+加绒打底裤时尚套装两件套</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang6.webp">
+                        <div class="loveIntro">
+                            <span>秋装上衣新款女宽松中长款高领毛衣套头女韩版纯色打底针织衫外套</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang7.webp">
+                        <div class="loveIntro">
+                            <span>羽绒棉服女冬中长款2017新款百搭韩版宽松显瘦大毛领加厚外套</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ylSon">
+                    <a href="">
+                        <img src="../img/shang8.webp">
+                        <div class="loveIntro">
+                            <span>【子曰子曰】情侣连帽棉衣外套冬季新款韩版加厚面包服情侣装棉服</span>
+                        </div>
+                        <div class="lovePrice">
+                            <p>￥9.9</p>
+                            <p>1.9w<b>&#xe602;</b></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--夏季新款部分结束-->
+
+        <div class="blankDiv"></div>
+        <!--列表页底部部分开始-->
+        <div id="homeFooter">
+            <a href="../index.html">
+                <img src="../img/bottom1.png">
+                <p>首页</p>
+            </a>
+            <a href="list.html">
+                <img src="../img/bottom2.png">
+                <p>分类</p>
+            </a>
+            <a href="shopCar.html">
+                <img src="../img/bottom3.png">
+                <p>购物车</p>
+            </a>
+            <a href="loginAll.html">
+                <img src="../img/bottom4.png">
+                <p>我的</p>
+            </a>
+        </div>
+        <!--列表底部部分结束-->
+    </div>
+
+    <!--产品列表部分结束-->
+</body>
+</html>
+<script>
+    //当首页搜索框获取焦点时让隐藏的搜索框显示，失去焦点时让其隐藏
+    var skip=document.querySelector('.search-inner input');
+    var hideDiv=document.querySelector('.searchHide');
+    skip.onclick=function(){
+        hideDiv.style.display='block';
+    }
+
+    //当隐藏搜索框后去获取焦点时边框变色，失去焦点时变回原来的颜色
+    var getFocus=document.querySelector('.inner input');
+    var sHide=document.querySelector('.inner');
+    getFocus.onfocus=function(){
+        sHide.style='border:1px solid #FF4466;';
+    }
+    getFocus.onblur=function(){
+        sHide.style='border:1px solid #808080;';
+    }
+
+    //点击隐藏搜索框中的箭头，返回首页
+    var backUp=document.querySelector('.hideTitle-inner b');
+    backUp.onclick=function(){
+        hideDiv.style.display='none';
+    }
+</script>

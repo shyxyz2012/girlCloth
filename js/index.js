@@ -73,7 +73,9 @@ function getTime(){
     var h=parseInt(res%da/ha);
     var m=parseInt(res%da%ha/ma);
     var s=parseInt(res%da%ha%ma/a);
+
     var str=add(h)+':'+add(m)+':'+add(s);
+    var st1=add(d)+'天'+add(h)+'时'+add(m)+'分'+add(s)+'秒';
     return str;
 }
 //首页到计时结束
@@ -96,3 +98,26 @@ function add(num){
     }
 }
 //首页计时器结束
+
+//详情页的倒计时部分开始
+function getDetailTime(){
+    var cdate=new Date();
+    var cms=cdate.getTime();
+    var fdate=new Date('2018/02/01');
+    var fms=fdate.getTime();
+    var res=fms-cms;
+
+    var a = 1000;
+    var ma = 60*a;
+    var ha = 60*ma;
+    var da = 24*ha;
+
+    var d=parseInt(res/da);
+    var h=parseInt(res%da/ha);
+    var m=parseInt(res%da%ha/ma);
+    var s=parseInt(res%da%ha%ma/a);
+
+    var str=add(d)+'天'+add(h)+'时'+add(m)+'分'+add(s)+'秒';
+    return str;
+}
+//详情页的倒计时部分结束

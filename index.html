@@ -9,7 +9,7 @@
     <script src="js/rem.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/index.js"></script>
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_ekgap6o4wm3rf6r.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_bpvjz6tt5pgsc3di.css">
     <link rel="stylesheet" href="css/iconfont.css">
 </head>
 <body>
@@ -20,12 +20,33 @@
                 <b>&#xe67c;</b>
                 <div>
                     <b>&#xe634;</b>
-                    <input type="text" value="韩版儿童运动鞋">
+                    <input type="text" placeholder="韩版儿童运动鞋">
                 </div>
-                <b class="car">&#xe601;</b>
+                <a href="pages/shopCar.html"><b class="car">&#xe601;</b></a>
+            </div>
+            <div class="searchHide">
+                <div class="searchHide-title">
+                    <div class="hideTitle-inner">
+                        <b>&#xe61c;</b>
+                        <div class="inner"><input type="text" placeholder="帽子"></div>
+                        <div class="searchL">搜索</div>
+                    </div>
+                </div>
+                <div class="searchHistory">
+                    <div class="fangda">
+                        <b>&#xe634;<span>历史搜索</span></b>
+                        <ins>&#xe663;</ins>
+                        <!--<ul>-->
+                            <!--<li></li>-->
+                        <!--</ul>-->
+                    </div>
+                </div>
+                <div class="hotSearch">
+                   <div><b>&#xe602;<span>热门搜索</span></b></div>
+                </div>
             </div>
         </div>
-        <!-- 搜索框部分结束-->
+        <!--搜索框部分结束-->
 
         <!--幻灯片部分开始-->
         <div id="photoChang">
@@ -282,12 +303,13 @@
                     </a>
                 </div>
                 <div class="ylSon">
-                    <a href="">
-                        <img src="img/love2.png">
+                    <a href="pages/details.html">
+                        <img src="img/love21.webp">
                         <img src="img/fd.png" class="fd">
                         <div class="loveIntro">
-                            <span>暖身贴</span>
-                            <span>大号</span>
+                            <span>blings/芭乐苏</span>
+                            <span>去黄</span>
+                            <span>冬季</span>
                         </div>
                         <div class="lovePrice">
                             <p>￥9.8</p>
@@ -624,17 +646,19 @@
         </div>
         <!--猜你喜欢部分结束-->
 
+        <div class="blankDiv"></div>
+
         <!--首页底部部分开始-->
         <div id="homeFooter">
             <a href="index.html">
                 <img src="img/bottom1.png">
                 <p>首页</p>
             </a>
-            <a href="">
+            <a href="pages/list.html">
                 <img src="img/bottom2.png">
                 <p>分类</p>
             </a>
-            <a href="">
+            <a href="pages/shopCar.html">
                 <img src="img/bottom3.png">
                 <p>购物车</p>
             </a>
@@ -653,4 +677,27 @@
     setInterval(function(){
         timeB.innerHTML=getTime();
     },1000)
+
+    //当首页搜索框获取焦点时让隐藏的搜索框显示，失去焦点时让其隐藏
+    var skip=document.querySelector('.search-inner input');
+    var hideDiv=document.querySelector('.searchHide');
+    skip.onclick=function(){
+        hideDiv.style.display='block';
+    }
+
+    //当隐藏搜索框后去获取焦点时边框变色，失去焦点时变回原来的颜色
+    var getFocus=document.querySelector('.inner input');
+    var sHide=document.querySelector('.inner');
+    getFocus.onfocus=function(){
+        sHide.style='border:1px solid #FF4466;';
+    }
+    getFocus.onblur=function(){
+        sHide.style='border:1px solid #808080;';
+    }
+
+    //点击隐藏搜索框中的箭头，返回首页
+    var backUp=document.querySelector('.hideTitle-inner b');
+    backUp.onclick=function(){
+        hideDiv.style.display='none';
+    }
 </script>

@@ -1,0 +1,377 @@
+@charset "UTF-8";
+@function data($num){
+  @return $num/20;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  height: 100%;
+  background: #F6F6F6;
+}
+
+//产品列表部分开始
+#proList{
+  width: 100%;
+  margin: 0 auto;
+}
+
+//产品列表头部开始
+#search{
+  width: 100%;
+  height: data(40rem);
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid #E5E5E5;
+  .search-inner{
+    width: 85%;
+    height: data(25rem);
+    margin: data(7rem) 7%;
+    position: absolute;
+    b{
+      font-family: iconfont;
+      color: #B3B3B3;
+      width: data(20rem);
+      height: data(20rem);
+    }
+    b:nth-child(1){
+      float: left;
+    }
+    b.car{
+      position: absolute;
+      right: 0;
+    }
+    div{
+      width: 80%;
+      height: data(25rem);
+      background: #eeeeee;
+      position: absolute;
+      border-radius: data(5rem);
+      left: data(28rem);
+      b{
+        float: right;
+        width: data(12rem);
+        height: data(16rem);
+        margin: 0 10px;
+      }
+      input{
+        float: left;
+        height: 100%;
+        font-size: 12px;
+        color: gray;
+        border: none;
+        outline: none;
+        background: #eeeeee;
+        position: absolute;
+        left: data(40rem);
+        top: data(0rem);
+      }
+    }
+  }
+  .searchHide{
+    width: 100%;
+    height: data(530rem);
+    background: #FFFFFF;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    display: none;
+    .searchHide-title{
+      width: 100%;
+      height: data(40rem);
+      border-bottom: 1px solid #eeeeee;
+      .hideTitle-inner{
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: data(6rem);
+        b{
+          font-family: iconfont;
+          font-size: data(18rem);
+          color: #808080;
+          margin: data(2rem) 0 0 0;
+        }
+        .inner{
+          width: 80%;
+          height: data(25rem);
+          border: 1px solid #808080;
+          border-radius: data(5rem);
+          line-height: data(25rem);
+          input{
+            border: none;
+            outline: none;
+            font-size: data(14rem);
+            margin:0 0 0 data(10rem);
+          }
+        }
+        .searchL{
+          font-size: data(12rem);
+          color: #808080;
+          margin-top: data(7rem);
+        }
+      }
+    }
+    .searchHistory{
+      width: 100%;
+      height: data(70rem);
+      border-bottom: 1px solid #eeeeee;
+      .fangda{
+        width: 95%;
+        margin:0 auto;
+        b,ins{
+          font-family: iconfont;
+          font-size: data(14rem);
+          color: #808080;
+          margin-top: data(10rem);
+        }
+        b{
+          float: left;
+          span{
+            font-size: data(12rem);
+          }
+        }
+        ins{
+          text-decoration: none;
+          float: right;
+        }
+      }
+    }
+    .hotSearch{
+      width: 100%;
+      overflow: hidden;
+      clear: both;
+      div{
+        width: 95%;
+        margin: 0 auto;
+        b{
+          font-family: iconfont;
+          font-size: data(14rem);
+          color: #808080;
+          span{
+            font-size: data(12rem);
+          }
+        }
+      }
+    }
+  }
+}
+//产品列表头部结束
+
+//热门市场部分开始
+#hotMarket{
+  width: 100%;
+  height: data(280rem);
+  background: #FFFFFF;
+  //margin-top: data(20rem);
+  .hotMarket-title{
+    background: url("../img/hmarket.png") no-repeat center center;
+    background-size: 40% auto;
+    color: #333;
+    font-size: 0.3rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    margin: 0 0 0.2rem 0;
+    padding: data(20rem);
+  }
+  .clothType-all{
+    width: 100%;
+    height: data(328rem);
+    .clothType{
+      width: 25%;
+      height: data(71rem);
+      text-align: center;
+      float: left;
+      a{
+        text-decoration: none;
+        img{
+          width: data(51rem);
+          height: data(51rem);
+        }
+        p{
+          font-size: data(12rem);
+          color: #333333;
+          @include ell(1);
+        }
+      }
+    }
+  }
+}
+//热门市场部分结束
+
+//最流行部分开始
+#hotFaction{
+  width: 100%;
+  height: data(150rem);
+  background: #FFFFFF;
+  margin-top: data(10rem);
+  .hotMarket-title{
+    background: url("../img/hmarket.png") no-repeat center center;
+    background-size: 40% auto;
+    color: #333;
+    font-size: 0.3rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    margin: 0 0 0.2rem 0;
+    padding: data(20rem);
+  }
+  .clothType-all{
+    width: 100%;
+    height: data(328rem);
+    .clothType{
+      width: 25%;
+      height: data(71rem);
+      text-align: center;
+      float: left;
+      a{
+        text-decoration: none;
+        img{
+          width: data(51rem);
+          height: data(51rem);
+        }
+        p{
+          font-size: data(12rem);
+          color: #333333;
+          @include ell(1);
+        }
+      }
+    }
+  }
+}
+//最流行部分结束
+
+//夏季新款部分开始
+#youLove{
+  width: 100%;
+  overflow: hidden;
+  .youLove-title{
+    background: url("../img/hmarket.png") no-repeat center center;
+    background-size: 40% auto;
+    color: #333;
+    font-size: 0.3rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    margin: 0 0 0.2rem 0;
+    padding: data(20rem);
+  }
+  .summerNew{
+    width: 100%;
+    height: data(35rem);
+    background: #FF0077;
+    .newType{
+      width: 90%;
+      margin: 0 auto;
+      height: data(35rem);
+      justify-content: space-between;
+      display: flex;
+      div{
+        color: #FFFFFF;
+        font-size: data(14rem);
+        height: data(35rem);
+        line-height: data(35rem);
+      }
+    }
+  }
+  .youLove-all{
+    width: 100%;
+    overflow: hidden;
+    .ylSon{
+      width: 48%;
+      height: data(265rem);
+      background: #FFFFFF;
+      float: left;
+      margin: data(3rem);
+      border-top-left-radius: data(5rem);
+      border-top-right-radius: data(5rem);
+      position: relative;
+      a{
+        text-decoration: none;
+        img{
+          width:100%;
+          height: data(200rem);
+        }
+        .loveIntro{
+          width: 95%;
+          margin: 0 auto;
+          height: data(30rem);
+          line-height: data(30rem);
+          span{
+            font-size: data(10rem);
+            color: #5A6F7A;
+            @include ell(1);
+          }
+        }
+        .lovePrice{
+          width: 95%;
+          margin: 0 auto;
+          height: data(30rem);
+          line-height:data(30rem);
+          p:nth-child(1){
+            font-size: data(14rem);
+            font-weight: bold;
+            color: #FF0077;
+            float: left;
+          }
+          p:nth-child(2){
+            font-size: data(14rem);
+            color: #808080;
+            float: right;
+          }
+        }
+      }
+      b{
+        font-family: iconfont;
+        color: grey;
+        font-size: data(14rem);
+        margin: 0 0 0 data(3rem);
+      }
+    }
+  }
+}
+.blankDiv{
+  width: 100%;
+  height: data(60rem);
+  margin: 0 auto;
+}
+//夏季新款部分结束
+
+//列表底部部分开始
+#homeFooter{
+  width: 100%;
+  height: data(65rem);
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  a{
+    text-decoration: none;
+    img{
+      width: data(20rem);
+      height: data(20rem);
+      margin: data(5rem) 0 0 0;
+    }
+    p{
+      font-size: data(14rem);
+      color: #6B6B6B;
+    }
+  }
+}
+//列表底部部分结束
+
+//产品列表部分结束

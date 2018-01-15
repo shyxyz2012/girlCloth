@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@function data($num){
+  @return $num/20;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  height: 100%;
+}
+//用户注册部分开始
+#userRegister{
+  width: 100%;
+  overflow: hidden;
+  .registerTitle{
+    width: 100%;
+    height: data(40rem);
+    background: #FAFAFA;
+    border-bottom: 1px solid #808080;
+    .arrow{
+      width: 15%;
+      height: 100%;
+      float: left;
+      font-family: iconfont;
+      color: #808080;
+      font-size: data(16rem);
+      text-align: center;
+      line-height: data(40rem);
+    }
+    .uRegister{
+      width: 70%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      font-size: data(16rem);
+      line-height: data(40rem);
+    }
+  }
+  .country{
+    width: 100%;
+    overflow: hidden;
+    margin: data(30rem) auto;
+    p:nth-child(1){
+      text-align: center;
+      font-size: data(14rem);
+      color: #808080;
+    }
+    p:nth-child(2){
+      position: relative;
+      text-align: center;
+      margin: data(10rem) auto;
+      ins{
+        text-decoration: none;
+        font-size: data(14rem);
+        margin:0 data(7rem);
+      }
+      span{
+        font-size: data(16rem);
+        color: #808080;
+        b{
+          font-size: data(20rem);
+          color: #000;
+        }
+      }
+      i{
+        font-family: iconfont;
+        font-size: data(30rem);
+        position: absolute;
+        right: data(10rem);
+
+      }
+    }
+    .nationHide{
+      width: 100%;
+      overflow: hidden;
+      display: none;
+      ul{
+        width: 35%;
+        margin: 0 auto;
+        background: #FFFFFF;
+        li{
+          list-style: none;
+          text-align: left;
+          a{
+            text-decoration: none;
+            font-size: data(12rem);
+            color: #000;
+            span{
+              color: #808080;
+              margin: 0 data(10rem);
+            }
+          }
+        }
+        li:hover{
+          background: orange;
+        }
+      }
+    }
+    .phoneNum{
+      width: 90%;
+      height: data(65rem);
+      margin: 0 auto;
+      p{
+        font-size: data(12rem);
+        margin: data(10rem) auto;
+        color: #000;
+      }
+      input{
+        width: 100%;
+        height: data(40rem);
+        text-align: center;
+        font-size: data(18rem);
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #eeeeee;
+      }
+    }
+    .testNum{
+      width: 90%;
+      height: data(70rem);
+      margin: data(10rem) auto;
+      border-bottom: 1px solid #eeeeee;
+      p:nth-child(1){
+        font-size: data(12rem);
+        margin: data(10rem) auto;
+        color: #000;
+      }
+      //input{
+      //  width: 100%;
+      //  height: data(40rem);
+      //  text-align: center;
+      //  font-size: data(18rem);
+      //  border: none;
+      //  outline: none;
+      //  border-bottom: 1px solid #000;
+      //}
+      .sure-code{
+        width: 90%;
+        height: data(60rem);
+        margin: data(10rem) auto;
+        font-size: data(18rem);
+        text-align: center;
+        input:nth-child(1){
+          text-align: center;
+          width: data(130rem);
+          height: data(40rem);
+          font-size: data(18rem);
+          border: none;
+          outline: none;
+        }
+        input:nth-child(2){
+          font-size: data(14rem);
+          width: data(50rem);
+          background: #FFFFFF;
+          color: #FF68A3;
+          border: none;
+          outline: none;
+        }
+        span{
+          font-size: data(14rem);
+          //margin-left: data(15rem);
+        }
+      }
+    }
+    .btnRegister{
+      width: 90%;
+      margin: data(20rem) auto;
+      background: #FF1877;
+      height: data(40rem);
+      border-radius: data(5rem);
+      font-size: data(16rem);
+      color: #FFFFFF;
+      text-align: center;
+      line-height: data(40rem);
+    }
+    .rLast{
+      width: 90%;
+      height: data(20rem);
+      margin: 0 auto;
+      a{
+        text-decoration: none;
+        font-size: data(14rem);
+        color: #FF1877;
+      }
+      a:first-child{
+        float: left;
+      }
+      a:last-child{
+        float: right;
+      }
+    }
+    .rFooter{
+      width: data(100rem);
+      height: data(100rem);
+      border-radius: 50%;
+      background: #0598E2;
+      margin: data(40rem) auto;
+      text-align: center;
+      position: relative;
+      div{
+        width: data(50rem);
+        height: data(50rem);
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        margin-top: data(-25rem);
+        margin-left: data(-25rem);
+        b{
+          font-family: iconfont;
+          color: #FFFFFF;
+          font-size: data(20rem);
+        }
+        p{
+          color: #FFFFFF;
+          font-size: data(10rem);
+        }
+      }
+    }
+  }
+}
+//用户注册部分结束

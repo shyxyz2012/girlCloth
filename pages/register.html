@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户注册页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/rem.js"></script>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/register.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_mgtwfxlixzyhw7b9.css">
+</head>
+<body>
+    <!--用户注册部分开始-->
+    <div id="userRegister">
+        <div class="registerTitle">
+            <div class="arrow">&#xe791;</div>
+            <div class="uRegister">进入蘑菇街</div>
+        </div>
+        <div class="country">
+            <p>国家与地区</p>
+            <p><span><b>中国</b><ins>+</ins>86</span><i>&#xe603;</i></p>
+            <div class="nationHide">
+                <ul>
+                    <li class="active"><a href="">中国台湾地区<span>+16</span></a></li>
+                    <li><a href="">中国香港<span>+34</span></a></li>
+                    <li><a href="">马来西亚<span>+896</span></a></li>
+                    <li><a href="">新加坡<span>+11</span></a></li>
+                    <li><a href="">日本<span>+34</span></a></li>
+                    <li><a href="">韩国<span>+098</span></a></li>
+                    <li><a href="">美国<span>+101</span></a></li>
+                    <li><a href="">加拿大<span>+31</span></a></li>
+                    <li><a href="">澳大利亚<span>+201</span></a></li>
+                    <li><a href="">新西兰<span>+890</span></a></li>
+                    <li><a href="">阿尔巴尼亚<span>+10</span></a></li>
+                    <li><a href="">阿根廷<span>+88</span></a></li>
+                    <li><a href="">阿曼<span>+66</span></a></li>
+                    <li><a href="">爱尔兰<span>+204</span></a></li>
+                    <li><a href="">埃及<span>+327</span></a></li>
+                    <li><a href="">爱沙尼亚<span>+007</span></a></li>
+                </ul>
+            </div>
+            <div class="phoneNum">
+                <p>你的手机号码是?</p>
+                <div><input type="text" placeholder="输入手机号码"></div>
+            </div>
+            <div class="testNum">
+                <p>验证码?</p>
+                <!--<div><input type="text" placeholder="输入验证码"></div>-->
+                <div class="sure-code">
+                    <input type="text" placeholder="输入验证码">
+                    <input type="button" value="获取">
+                    <span></span>
+                </div>
+            </div>
+            <div class="btnRegister">
+                一键注册
+            </div>
+            <div class="rLast">
+                <a href="">账号密码登录</a>
+                <a href="">免密登录</a>
+            </div>
+            <div class="rFooter">
+               <div>
+                   <b>&#xe605;</b>
+                   <p>QQ登录</p>
+               </div>
+            </div>
+        </div>
+    </div>
+    <!--用户注册部分结束-->
+</body>
+</html>
+<script>
+    var inp=document.querySelector('.sure-code [type=text]');
+    var btn=document.querySelector('.sure-code [type=button]');
+    var spa=document.querySelector('.sure-code span');
+    var timer;
+    btn.onclick=function(){
+        //获取0-10之间随机的4个数字
+        var str='';
+        for(var i=0;i<4;i++){
+            str+= parseInt(Math.random()*10);
+        }
+        spa.innerHTML=str;
+
+        //将btn里的值赋值为60秒倒计时
+        var num=30;
+        timer=setInterval(function(){
+            btn.value=num+'s';
+            num--;
+            if(num<0){
+                clearInterval(timer);
+                btn.value="重获取";
+            }
+        },500);
+
+        //当输入框失去焦点时btn里的值
+        inp.onblur=function(){
+            if(this.value==spa.innerHTML){
+                clearInterval(timer);
+                btn.value='验证成功';
+            }else{
+                clearInterval(timer);
+                btn.value='验证失败';
+            }
+        }
+    }
+
+    var backUp=document.querySelector('.arrow');
+    backUp.onclick=function(){
+        history.back();
+    }
+</script>

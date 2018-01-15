@@ -1,0 +1,655 @@
+@charset "UTF-8";
+@function data($num){
+  @return $num/20;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: #EAEAEA;
+}
+#ptoDetail {
+  width: 100%;
+  overflow: hidden;
+}
+  //height: data(1800rem);
+#phoBigImg{
+  width: 100%;
+  position: relative;
+  img{
+    width: 100%;
+    height: data(420rem);
+  }
+  .timeMany{
+    position: absolute;
+    width: 100%;
+    height: data(35rem);
+    bottom: 0;
+    background-image: url("../img/huopin.png");
+    background-size: 100% data(35rem);
+    .timeStart{
+      width: data(130rem);
+      height: 100%;
+      float: right;
+      text-align: center;
+      p{
+        font-size: data(12rem);
+        color: #FF7600;
+      }
+      div{
+        width: 100%;
+        height: data(20rem);
+        color: #000;
+        font-size: data(12rem);
+        line-height: data(20rem);
+      }
+    }
+  }
+}
+.proTitlePrice{
+  width: 100%;
+  height: data(100rem);
+  background: #FFFFFF;
+  .proTitle{
+    width: 90%;
+    margin: 0 auto;
+    font-size: data(14rem);
+    color: #000;
+    padding: data(15rem) 0 0 0;
+  }
+  .proPrice{
+    width: 90%;
+    height: data(45rem);
+    margin: data(10rem) auto;
+    span:nth-child(1){
+      float: left;
+      font-size: data(26rem);
+      ins{
+        text-decoration: none;
+        font-size: data(10rem);
+        margin-top: data(-15rem);
+      }
+    }
+    span:nth-child(2){
+      float: left;
+      margin-left: data(10rem);
+      p{
+        font-size: data(12rem);
+        color: #808080;
+      }
+      a{
+        font-size: data(12rem);
+        color: #FF488C;
+        background: #FFE6E8;
+      }
+    }
+  }
+}
+.emailMoney{
+  width: 100%;
+  height: data(70rem);
+  float: right;
+  background: #FFFFFF;
+  .emailTitle{
+    width: 93%;
+    font-size: data(12rem);
+    color: #808080;
+    height: data(35rem);
+    line-height: data(35rem);
+    border-bottom:1px solid #eeeeee;
+    float: right;
+  }
+  .proBrand{
+    width: 93%;
+    float: right;
+    ins{
+      text-decoration: none;
+      font-size: data(10rem);
+      color: #808080;
+    }
+    img{
+      width: data(15rem);
+      height: data(15rem);
+      position: relative;
+      top: data(3rem);
+      right: data(4rem);
+    }
+    b{
+      font-family: iconfont;
+      font-size: data(20rem);
+      float: right;
+      color: #808080;
+      margin-top: data(5rem);
+      clear: both;
+    }
+  }
+}
+.shy{
+  clear: both;
+}
+.proDefault{
+  width: 100%;
+  background: #FFFFFF;
+  height: data(40rem);
+  margin: data(10rem) auto;
+  line-height: data(40rem);
+  span{
+    font-size: data(14rem);
+    color: #808080;
+    margin-left: data(12rem);
+    ins{
+      text-decoration: none;
+      color: #FF2255;
+    }
+  }
+  a{
+    float: right;
+    font-family: iconfont;
+    text-decoration: none;
+    font-size: data(20rem);
+  }
+}
+.cheapActivity{
+  width: 100%;
+  height: data(85rem);
+  background: #FFFFFF;
+  margin: data(10rem) auto;
+  div{
+    width: 90%;
+    margin:data(10rem) auto;
+    .firstP{
+      font-size: data(12rem);
+      color: #808080;
+      padding: data(5rem) 0 0 0;
+    }
+  }
+  .cheapQuan{
+    display: flex;
+    justify-content: space-around;
+    div{
+      width: data(100rem);
+      height: data(60rem);
+      background-image: url("../img/cheapBg.png");
+      background-size: data(100rem) data(60rem);
+      margin: 0 0 0 data(5rem);
+      text-align: center;
+      p:nth-child(1){
+        color: #FFFFFF;
+        font-size: data(18rem);
+        margin-top: data(10rem);
+      }
+      p:nth-child(2){
+        color: #FFFFFF;
+        font-size: data(12rem);
+      }
+      img{
+        width: data(10rem);
+        height: data(10rem);
+        margin-left: data(-3rem);
+      }
+    }
+  }
+}
+
+.custerEvaluate{
+  width: 100%;
+  height: data(110rem);
+  background: #FFFFFF;
+  margin: data(10rem) 0 0 0;
+  .evaluateTitle{
+    width: 90%;
+    height: data(35rem);
+    margin: 0 auto;
+    line-height: data(35rem);
+    p{
+      font-size: data(12rem);
+      color: #808080;
+      b{
+      float: right;
+      font-family: iconfont;
+      font-size: data(20rem);
+    }
+    }
+  }
+  .evaluateType{
+    width: 90%;
+    height: data(80rem);
+    margin: 0 auto;
+    span{
+      font-size: data(12rem);
+      color: #FF5777;
+      background: #FFE8EE;
+    }
+  }
+}
+.manyPeople{
+  width: 100%;
+  height: data(290rem);
+  background: #FFFFFF;
+  margin: 0 auto;
+  .peopleZi{
+    width: 90%;
+    height: data(30rem);
+    margin: 0 auto;
+    line-height: data(30rem);
+    padding: data(10rem) 0;
+    img{
+      float: left;
+      width: data(25rem);
+      height: data(25rem);
+      border-radius: 50%;
+    }
+    span{
+      font-size: data(12rem);
+      color: #808080;
+      float: left;
+      margin-left: data(15rem);
+    }
+  }
+  .evaluateContain{
+    width: 90%;
+    margin: data(5rem) auto;
+    font-size: data(12rem);
+    color: #808080;
+  }
+  .evaluateImg{
+    width: 90%;
+    margin: data(5rem) auto;
+    border-bottom: 1px solid #eeeeee;
+    img{
+      width: data(60rem);
+      height: data(60rem);
+      margin-bottom: data(30rem);
+    }
+  }
+}
+.proShop{
+  width: 100%;
+  height: data(100rem);
+  background: #FFFFFF;
+  margin: data(10rem) auto;
+  .proShopTitle{
+    width: 90%;
+    height: data(40rem);
+    line-height: data(40rem);
+    margin: 0 auto;
+    .proOne{
+      width: data(41rem);
+      height: data(41rem);
+      float: left;
+    }
+    p{
+      float: left;
+      font-size: data(12rem);
+      color: #808080;
+      .lP{
+        width: data(20rem);
+        height: data(13rem);
+        float: right;
+        margin-top: data(15rem);
+      }
+    }
+  }
+  .allSale{
+    width: 90%;
+    height: data(50rem);
+    justify-content: space-around;
+    display: flex;
+    div{
+      width: data(90rem);
+      height: data(45rem);
+      font-size: data(12rem);
+      text-align: center;
+      border-right: 1px solid #eeeeee;
+      margin: data(15rem) auto;
+    }
+    div:last-child{
+      border-right: none;
+      p{
+        color: #808080;
+        span{
+          color: #FF5777;
+        }
+      }
+    }
+  }
+}
+.imgDetail{
+  width: 100%;
+  height: data(140rem);
+  background: #FFFFFF;
+  margin: 0 auto;
+  .imgDetail-title{
+    width: 100%;
+    height: data(35rem);
+    line-height: data(35rem);
+    border-bottom: 1px solid #eeeeee;
+    font-size: data(12rem);
+    color: #FF5777;
+    padding-left: data(13rem);
+  }
+  .imgDetail-contain{
+    width: 90%;
+    margin: data(10rem) auto;
+    font-size: data(12rem);
+    color: #808080;
+  }
+  .proIntro{
+    width: 90%;
+    margin: data(10rem) auto;
+    font-size: data(12rem);
+    color: #000;
+  }
+}
+.proIntroImg{
+  width: 100%;
+  margin: 0 auto;
+  img{
+    width: 100%;
+    display: block;
+    margin-bottom: data(5rem);
+  }
+  img:last-child{
+    margin-bottom: 0;
+  }
+}
+.proPlay{
+  width: 100%;
+  //height: data(500rem);
+  overflow: hidden;
+  background: #FFFFFF;
+  margin:0 auto;
+  .proPlayTable{
+    width: 90%;
+    margin: data(10rem) auto;
+    table{
+      font-size: data(12rem);
+      border-collapse: collapse;
+      tr td:first-child{
+        color: #808080;
+      }
+      tr td:last-child{
+        color: #FF5777;
+      }
+      tr,td{
+        border-bottom: 1px solid #eeeeee;
+        height: data(30rem);
+      }
+    }
+  }
+}
+.detailsLast{
+  width: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  .detailsLast-pro{
+    width: 90%;
+    margin: 0 auto;
+    height: data(600rem);
+    div{
+      width: data(90rem);
+      height: data(180rem);
+      font-size: data(12rem);
+      color: #808080;
+      float: left;
+      margin: 0 0 0 data(5rem);
+      img{
+        width: 100%;
+        height: data(141rem);
+      }
+      p{
+        @include ell(1);
+      }
+    }
+  }
+}
+
+
+
+//产品详情底部部分开始
+#proDetails_footer{
+  width: 100%;
+  height: data(45rem);
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #eeeeee;
+  justify-content: space-around;
+  display: flex;
+  .equal{
+    width: data(51rem);
+    height: 100%;
+    border-right: 1px solid #eeeeee;
+    background: #FFFFFF;
+    a{
+      text-decoration: none;
+      font-size: data(14rem);
+      color: #808080;
+      text-align: center;
+      b{
+        font-family: iconfont;
+        font-size: data(18rem);
+        margin-left: data(16rem);
+      }
+    }
+  }
+  .oneSale,.twoSale{
+    width: data(89rem);
+    height: 100%;
+    font-size: data(14rem);
+    text-align: center;
+    a{
+      text-decoration: none;
+      text-align: center;
+      p{
+        margin-top: data(4rem);
+      }
+    }
+  }
+  .oneSale{
+    background: #FFE6E8;
+    a{
+      color: #FF6784;
+    }
+  }
+  .twoSale{
+    background: #FF488C;
+    a{
+      color: #FFFFFF;
+    }
+  }
+}
+
+//加入购物车部分开始
+#innerCar{
+  width: 100%;
+  height: 100%;
+  background: rgba(153,153,153,0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  .proInCar{
+    width: 100%;
+    height: data(175rem);
+    background: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    div:nth-child(1){
+      width: 90%;
+      margin: 0 auto;
+      img{
+        width: data(85rem);
+        height: data(128rem);
+        margin-top: data(-60rem);
+        float: left;
+      }
+      .carTitle{
+       margin-left: data(15rem);
+        margin-top: data(15rem);
+        p:nth-child(1){
+        font-size: data(22rem);
+          ins{
+            font-size: data(10rem);
+            text-decoration: none;
+          }
+        }
+        p:nth-child(2){
+          font-size: data(12rem);
+        }
+        p:nth-child(3){
+          font-size: data(12rem);
+          a{
+            text-decoration: none;
+            color: #FF4C87;
+          }
+        }
+      }
+      b{
+        font-family: iconfont;
+        font-size: data(20rem);
+        float: right;
+        margin-top: data(-50rem);
+        //margin-right: data(15rem);
+      }
+    }
+    .proCarNum{
+      width: 95%;
+      height: data(40rem);
+      margin: data(10rem) auto;
+      //border: 1px solid black;
+      //line-height: data(40rem);
+      clear: both;
+      p{
+        font-size: data(12rem);
+        color: #808080;
+      }
+      input{
+        width: data(20rem);
+        height: data(20rem);
+        line-height: data(15rem);
+        text-align: center;
+        font-size: data(10rem);
+      }
+    }
+    .carInLast{
+      width: 100%;
+      height: data(40rem);
+      line-height: data(40rem);
+      background: #FF4C87;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: data(14rem);
+    }
+  }
+}
+//加入购物车部分结束
+
+//产品详情底部部分结束
+
+//产品详情页侧边栏部分开始
+#detailAside{
+  width: data(60rem);
+  height: data(190rem);
+  position: fixed;
+  bottom: data(50rem);
+  right: data(10rem);
+  div{
+    width: data(55rem);
+    height: data(55rem);
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(62,42,37,0.8);
+    color: #FFFFFF;
+    font-size: data(12rem);
+    margin-bottom: data(10rem);
+    position: relative;
+    line-height: data(20rem);
+    p{
+      width: data(35rem);
+      height: data(37rem);
+      left: data(10rem);
+      top: data(10rem);
+      position: absolute;
+    }
+    b{
+      font-family: iconfont;
+      color: #FFFFFF;
+      font-size: data(20rem);
+    }
+    a{
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+}
+//产品详情页侧边栏部分结束
+
+//侧边栏中快捷导航部分开始
+#fastNav{
+  width: 100%;
+  height: 100%;
+  background: rgba(76,73,75,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  .hideNav{
+    width: data(100rem);
+    height: data(160rem);
+    position: absolute;
+    right: data(25rem);
+    bottom: data(250rem);
+    div{
+      width: 100%;
+      height: data(40rem);
+      span{
+        font-size: data(14rem);
+        color: #FFFFFF;
+      }
+      a{
+        text-decoration: none;
+        width: data(35rem);
+        height: data(35rem);
+        background: #FFFFFF;
+        text-align: center;
+        line-height: data(35rem);
+        float: right;
+        border-radius: 50%;
+        b{
+          font-family: iconfont;
+          color: #808080;
+          font-size: data(20rem);
+        }
+      }
+    }
+  }
+  .hideNavLast{
+    width: data(55rem);
+    height: data(55rem);
+    text-align: center;
+    color: #FFFFFF;
+    background: #FF5577;
+    line-height: data(55rem);
+    position: fixed;
+    right: data(15rem);
+    border-radius: 50%;
+    bottom: data(185rem);
+    b{
+      font-family: iconfont;
+      color: #FFFFFF;
+      font-size: data(20rem);
+    }
+  }
+}
+//侧边栏中快捷导航部分结束
+

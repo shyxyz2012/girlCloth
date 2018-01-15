@@ -13,7 +13,7 @@
 </head>
 <body>
     <!--产品详情部分开始-->
-    <div id="ptoDetail">
+
         <div id="phoBigImg">
             <img src="../img/loveB1.webp">
             <div class="timeMany">
@@ -287,7 +287,7 @@
                 </a>
             </div>
             <div class="equal">
-                <a href="">
+                <a href="javascript:;">
                     <b>&#xe899;</b>
                     <p>加购</p>
                 </a>
@@ -373,7 +373,7 @@
             </div>
         </div>
         <!--侧边栏中快捷导航部分结束-->
-    </div>
+
 <!--产品详情部分结束-->
 </body>
 </html>
@@ -400,6 +400,7 @@
     //加入购物车部分
     var shopCar=document.querySelectorAll('#proDetails_footer .equal')[2];
     var hideCar=document.querySelector('#innerCar');
+    hideCar.style.display = "none";
     shopCar.onclick=function(){
         hideCar.style.display='block';
     }

@@ -56,12 +56,18 @@ body,html{
       margin: data(30rem) auto;
       border-bottom: 1px solid #808080;
       input{
-        width: 100%;
+        width: 70%;
         height: data(40rem);
-        font-size: data(26rem);
+        font-size: data(16rem);
         padding: 0 0 0 data(10rem);
         border: none;
         outline: none;
+      }
+      span{
+        font-size: data(12rem);
+        color: #808080;
+        float: right;
+        margin-top: data(10rem);
       }
     }
   }

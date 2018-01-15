@@ -81,14 +81,6 @@ function getTime(){
 //首页到计时结束
 
 //首页计时器开始
-//function geTime(){
-//    var date=new Date();
-//    var h=date.getHours();
-//    var m=date.getMinutes();
-//    var s=date.getSeconds();
-//    var str=add(h)+":"+add(m)+":"+add(s);
-//    return str;
-//}
 //当时间是一位数时在其前面加0
 function add(num){
     if(num>9){
@@ -121,3 +113,42 @@ function getDetailTime(){
     return str;
 }
 //详情页的倒计时部分结束
+
+var timeB=document.querySelector('.interTime b');
+timeB.innerHTML=getTime();
+setInterval(function(){
+    timeB.innerHTML=getTime();
+},1000)
+
+
+//function indexAll(){
+//    var timeB=document.querySelector('.interTime b');
+//    timeB.innerHTML=getTime();
+//    setInterval(function(){
+//        timeB.innerHTML=getTime();
+//    },1000)
+//
+//    //当首页搜索框获取焦点时让隐藏的搜索框显示，失去焦点时让其隐藏
+//    var skip=document.querySelector('.search-inner input');
+//    var hideDiv=document.querySelector('.searchHide');
+//    skip.onclick=function(){
+//        hideDiv.style.display='block';
+//    }
+//
+//    //当隐藏搜索框后去获取焦点时边框变色，失去焦点时变回原来的颜色
+//    var getFocus=document.querySelector('.inner input');
+//    var sHide=document.querySelector('.inner');
+//    getFocus.onfocus=function(){
+//        sHide.style='border:1px solid #FF4466;';
+//    }
+//    getFocus.onblur=function(){
+//        sHide.style='border:1px solid #808080;';
+//    }
+//
+//    //点击隐藏搜索框中的箭头，返回首页
+//    var backUp=document.querySelector('.hideTitle-inner b');
+//    backUp.onclick=function(){
+//        hideDiv.style.display='none';
+//    }
+//}
+//indexAll();

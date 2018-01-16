@@ -142,6 +142,26 @@ body{
           text-decoration: none;
           float: right;
         }
+        ul{
+          justify-content: space-between;
+          display: flex;
+          width: 90%;
+          height: data(40rem);
+          margin:0 auto;
+          li{
+            float: left;
+            list-style: none;
+            width: data(40rem);
+            height: data(20rem);
+            text-align: center;
+            line-height: data(20rem);
+            border: 1px solid #E5E5E5;
+            border-radius: data(3rem);
+            font-size: data(12rem);
+            color: #000;
+            margin-top: data(10rem);
+          }
+        }
       }
     }
     .hotSearch{
@@ -157,6 +177,27 @@ body{
           color: #808080;
           span{
             font-size: data(12rem);
+          }
+        }
+      }
+      ul{
+        width: 90%;
+        height: data(100rem);
+        margin: data(10rem) auto;
+        li{
+          list-style: none;
+          float: left;
+          height: data(23rem);
+          width: data(50rem);
+          border: 1px solid #E5E5E5;
+          border-radius: data(5rem);
+          text-align: center;
+          line-height: data(20rem);
+          margin: data(6rem);
+          a{
+            text-decoration: none;
+            font-size: data(12rem);
+            color: #000;
           }
         }
       }

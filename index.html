@@ -28,7 +28,7 @@
                 <div class="searchHide-title">
                     <div class="hideTitle-inner">
                         <b>&#xe61c;</b>
-                        <div class="inner"><input type="text" placeholder="帽子"></div>
+                        <div class="inner"><input type="text" value="帽子" class="inpSearch"></div>
                         <div class="searchL">搜索</div>
                     </div>
                 </div>
@@ -36,13 +36,21 @@
                     <div class="fangda">
                         <b>&#xe634;<span>历史搜索</span></b>
                         <ins>&#xe663;</ins>
-                        <!--<ul>-->
-                            <!--<li></li>-->
-                        <!--</ul>-->
+                        <ul></ul>
                     </div>
                 </div>
                 <div class="hotSearch">
                    <div><b>&#xe602;<span>热门搜索</span></b></div>
+                    <ul>
+                        <li><a href="javascript:;">上衣</a></li>
+                        <li><a href="javascript:;">裙子</a></li>
+                        <li><a href="javascript:;">卫衣</a></li>
+                        <li><a href="javascript:;">大衣</a></li>
+                        <li><a href="javascript:;">棉服</a></li>
+                        <li><a href="javascript:;">羽绒服</a></li>
+                        <li><a href="javascript:;">长靴</a></li>
+                        <li><a href="javascript:;">运动鞋</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -690,6 +698,7 @@
     var sHide=document.querySelector('.inner');
     getFocus.onfocus=function(){
         sHide.style='border:1px solid #FF4466;';
+        getFocus.value='';
     }
     getFocus.onblur=function(){
         sHide.style='border:1px solid #808080;';
@@ -699,5 +708,20 @@
     var backUp=document.querySelector('.hideTitle-inner b');
     backUp.onclick=function(){
         hideDiv.style.display='none';
+    }
+
+    //获取搜索框中的值并将值加入到另一个ul列表中
+    var ulList=document.querySelector('.fangda ul');
+    getFocus.onblur=function(){
+        var  evt= this.value;
+        var newLi=document.createElement('li');
+        newLi.innerHTML=evt;
+        ulList.insertBefore(newLi,ulList.firstChild);
+    }
+
+    //点击删除按钮移除ul列表
+    var del=document.querySelector('.fangda ins');
+    del.onclick=function(){
+        ulList.remove();
     }
 </script>

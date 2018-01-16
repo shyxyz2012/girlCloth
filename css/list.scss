@@ -163,6 +163,27 @@ body,html{
           }
         }
       }
+      ul{
+        width: 90%;
+        height: data(100rem);
+        margin: data(10rem) auto;
+        li{
+          list-style: none;
+          float: left;
+          height: data(23rem);
+          width: data(50rem);
+          border: 1px solid #E5E5E5;
+          border-radius: data(5rem);
+          text-align: center;
+          line-height: data(20rem);
+          margin: data(6rem);
+          a{
+            text-decoration: none;
+            font-size: data(12rem);
+            color: #000;
+          }
+        }
+      }
     }
   }
 }
@@ -282,12 +303,71 @@ body,html{
         font-size: data(14rem);
         height: data(35rem);
         line-height: data(35rem);
+        b{
+          font-family: iconfont;
+          color: #FFFFFF;
+          font-size: data(20rem);
+          position: relative;
+          top: data(4rem);
+        }
+      }
+    }
+    .listPrice{
+      width: 100%;
+      height: data(80rem);
+      background: #FFFFFF;
+      position: absolute;
+      z-index: 20;
+      display: none;
+      .price{
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        div{
+          width: data(96rem);
+          height: data(26rem);
+          background: #E5E5E5;
+          color: #000;
+          font-size: data(12rem);
+          text-align: center;
+          line-height: data(26rem);
+          margin-top: data(10rem);
+        }
+      }
+      .priceSure{
+        width: 95%;
+        margin:data(10rem) auto;
+        justify-content: space-between;
+        display: flex;
+        div,input{
+          width: data(70rem);
+          height: data(25rem);
+          font-size: data(12rem);
+          text-align: center;
+          line-height: data(25rem);
+        }
+        div:nth-child(1){
+          width: data(44rem);
+          height: data(42rem);
+          color: #808080;
+        }
+        input:nth-child(2),input:nth-child(4){
+          color: #808080;
+          border: 1px solid #E5E5E5;
+          border-radius: data(2rem);
+        }
+        div:nth-child(5){
+          color: #FFFFFF;
+          background: #FF5B76;
+        }
       }
     }
   }
   .youLove-all{
     width: 100%;
     overflow: hidden;
+    //margin-top: data(35rem);
     .ylSon{
       width: 48%;
       height: data(265rem);

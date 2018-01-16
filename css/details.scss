@@ -610,12 +610,16 @@ body{
     position: absolute;
     right: data(25rem);
     bottom: data(250rem);
+    //display: none;
     div{
       width: 100%;
       height: data(40rem);
+
       span{
         font-size: data(14rem);
         color: #FFFFFF;
+        position: relative;
+        top: data(7rem);
       }
       a{
         text-decoration: none;

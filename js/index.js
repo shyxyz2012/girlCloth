@@ -114,11 +114,11 @@ function getDetailTime(){
 }
 //详情页的倒计时部分结束
 
-var timeB=document.querySelector('.interTime b');
-timeB.innerHTML=getTime();
-setInterval(function(){
-    timeB.innerHTML=getTime();
-},1000)
+//var timeB=document.querySelector('.interTime b');
+//timeB.innerHTML=getTime();
+//setInterval(function(){
+//    timeB.innerHTML=getTime();
+//},1000)
 
 
 //function indexAll(){
@@ -152,3 +152,24 @@ setInterval(function(){
 //    }
 //}
 //indexAll();
+
+//列表页价格的显示和隐藏
+$(function(){
+    $(".newType b").click(function(){
+        if($(".listPrice").is(":hidden")){
+            $(".listPrice").slideDown();
+        }else{
+            $(".listPrice").slideUp();
+        }
+    });
+
+    //列表页遮罩层的显示、隐藏速度
+    //$(".hideNavLast").click(function(){
+    //    if($(".hideNav").is(":hidden")){
+    //        $(".hideNav").slideUp();
+    //    }
+    //    else{
+    //        $(".hideNav").slideDown();
+    //    }
+    //});
+})

@@ -130,5 +130,46 @@ body{
       }
     }
   }
+  .shopCarLast{
+    width: 100%;
+    height: data(40rem);
+    border-top: 1px solid #E5E5E5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .shopBottom{
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      font-size: data(12rem);
+      justify-content: space-between;
+      display: flex;
+      line-height: data(40rem);
+      input:nth-child(1){
+        width: data(15rem);
+        height: data(15rem);
+        border: 1px solid #E5E5E5;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+      }
+      span:nth-child(2){
+        color: #000;
+      }
+      ins{
+        color: #FF5777;
+        text-decoration: none;
+      }
+      div.goPrice{
+        width: data(60rem);
+        height: data(25rem);
+        background: #FF5777;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: data(25rem);
+        margin-top: data(8rem);
+      }
+    }
+  }
 }
 //加入购物车部分结束

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <script src="../js/rem.js"></script>
     <script src="../js/jquery-2.1.4.min.js"></script>
-    <script src="../js/index.js"></script>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_ijhlmhzjzcl3di.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
 </head>
 <body>
     <!--产品详情部分开始-->
@@ -376,36 +376,4 @@
 <!--产品详情部分结束-->
 </body>
 </html>
-<script>
-    //头部倒计时部分
-    var detail=document.querySelector('.timeStart div');
-    detail.innerHTML=getDetailTime();
-    setInterval(function(){
-        detail.innerHTML=getDetailTime();
-    },1000)
-
-    //快捷导航部分
-    var hideSide=document.querySelector('#detailAside .first');
-    var hideBig=document.querySelector('#fastNav');
-    var hideAll=document.querySelector('.hideNavLast');
-
-    hideSide.onclick=function(){
-        hideBig.style.display='block';
-    }
-    hideAll.onclick=function(){
-        hideBig.style.display='none';
-    }
-
-    //加入购物车部分
-    var shopCar=document.querySelectorAll('#proDetails_footer .equal')[2];
-    var hideCar=document.querySelector('#innerCar');
-    hideCar.style.display = "none";
-    shopCar.onclick=function(){
-        hideCar.style.display='block';
-    }
-
-    var cha=document.querySelector('.proInCar');
-    cha.onclick=function(){
-        hideCar.style.display='none';
-    }
-</script>
+<script  src="../js/details.js"></script>

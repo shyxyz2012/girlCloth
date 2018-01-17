@@ -51,11 +51,19 @@ body,html{
       margin: data(10rem) auto;
       border-bottom: 1px solid #808080;
       input{
-        width: 100%;
+        width: 72%;
         height: data(50rem);
-        font-size: data(20rem);
+        font-size: data(16rem);
         border: none;
         outline: none;
+        float: left;
+      }
+      span{
+        font-size: data(12rem);
+        color: #808080;
+        float: right;
+        margin-top: data(10rem);
+        //display: none;
       }
     }
   }

@@ -8,6 +8,7 @@
     <script src="../js/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="../css/qqLogin.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_501790_1ufasa1j79hn0zfr.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
 </head>
 <body>
     <!--QQ登录部分开始-->
@@ -18,8 +19,14 @@
             <p>亿万用户已选择QQ帐号登录应用</p>
         </div>
         <div class="userIntro">
-            <div class="username"><input type="text" placeholder="支持QQ号/邮箱/手机号登录"></div>
-            <div class="psw"><input type="password" placeholder="密码"></div>
+            <div class="username">
+                <input type="text" placeholder="支持QQ号/邮箱/手机号登录">
+                <span></span>
+            </div>
+            <div class="psw">
+                <input type="password" placeholder="密码">
+                <span></span>
+            </div>
         </div>
         <div class="loginBtn">
             <a href="">登录</a>
@@ -76,26 +83,4 @@
     <!--QQ登录部分结束-->
 </body>
 </html>
-<script>
-    $(function(){
-        $("td :lt(4)").css("display","block");
-        var btn=document.querySelector(".loginPower button");
-
-        $(".loginPower button").click(function(){
-            var dis=$(".loginPower tr:eq(2)").css("display");
-            if(dis=="none"){
-                $(".loginPower tr").css("display","block");
-            }else{
-                $(".loginPower tr").css("display","none");
-                $(".loginPower tr:lt(2)").css("display","block");
-            }
-
-            var i=btn.value++;
-            if(i%2==0){
-                btn.innerHTML='︿查看全部';
-            }else{
-                btn.innerHTML='︿点击收起';
-            }
-        });
-    });
-</script>
+<script src="../js/qqLogin.js"></script>

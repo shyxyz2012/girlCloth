@@ -334,8 +334,8 @@
         <!--产品详情页侧边栏部分开始-->
         <div id="detailAside">
             <div class="first"><p>快捷<br>导航</p></div>
-            <div><p><b>&#xe67c;</b><br>私聊</p></div>
-            <div><a href="#phoBigImg"><p><b>&#xe63a;</b><br>置顶</p></a></div>
+            <div class="two"><p><b>&#xe67c;</b><br>私聊</p></div>
+            <div class="three"><a href="#phoBigImg"><p><b>&#xe63a;</b><br>置顶</p></a></div>
         </div>
         <!--产品详情页侧边栏部分结束-->
 
@@ -377,3 +377,23 @@
 </body>
 </html>
 <script  src="../js/details.js"></script>
+<script>
+    //滚轮滚动一定距离让置顶出现或消失
+    var currTop=0;
+    $(function(){
+        $("#detailAside .three").hide();
+        $(window).scroll(function(){
+            currTop=$(window).scrollTop();
+            if(currTop<0){
+                $("#detailAside .three").fadeOut(10);
+                $("#detailAside").css("bottom","0");
+            }else if(currTop>300){
+                $("#detailAside .three").fadeIn(500);
+                $("#detailAside").css("bottom","50px");
+            }else{
+                $("#detailAside .three").fadeOut();
+                $("#detailAside").css("bottom","0");
+            }
+        });
+    })
+</script>
